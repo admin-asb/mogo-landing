@@ -85,3 +85,30 @@ allSections.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add("section--hidden");
 });
+
+/* Modal */
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const btnOpenModal = document.querySelector(".btn");
+const btnCloseModal = document.querySelector(".close-modal");
+
+const openModal = () => {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+
+btnOpenModal.addEventListener("click", openModal);
+
+const closeModal = () => {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+btnCloseModal.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
+});
