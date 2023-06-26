@@ -52,7 +52,7 @@ footer {
 
 /* Intro */
 .intro {
-  padding-top: 100px;
+  padding-top: 189px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -626,7 +626,7 @@ footer {
   position: relative;
 
   /* IN THE END */
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .slide {
